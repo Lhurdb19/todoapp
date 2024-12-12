@@ -1,0 +1,294 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url(/src/Assets/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: MontserratBold;
+  src: url(/src/Assets/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: MontserratLight;
+  src: url(/src/Assets/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: MontserratItalic;
+  src: url(/src/Assets/Montserrat-Italic.ttf);
+}
+
+.todo-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+  background-color: #4c47d7;
+}
+
+.app-container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 20px; */
+  padding: 20px;
+  background-color: #e29c0f;
+  border-radius: 5px;
+}
+
+@media screen and (max-width:896px) {
+  .todo-container {
+    width: 100%;
+    padding: 100px 10px;
+  }
+  
+  .app-container {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.app-container > .task-box {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.task-box > .icon {
+  font-size: 50px;
+  color: red;
+}
+h1 {
+  font-size: 40px;
+  color: white;
+  font-family: BebasNeue;
+}
+
+.app-container > form {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #abb4b5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+@media screen and (max-width:896px) {
+  .app-container > form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+form > input {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-family: MontserratBold;
+  background-color: #c5dee4;
+}
+
+form > .add {
+  width: 50px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.add > .display-on-hover {
+  bottom: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  font-family: MontserratItalic;
+}
+.add:hover > .display-on-hover {
+  display: block;
+  position: absolute;
+}
+
+.app-container > ul {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #abb4b5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width:896px) {
+  .app-container > ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+.app-container > ul > li {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+ul > li > .edit-input {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-input > input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  outline: none;
+  background-color: #c5dee4;
+  font-family: MontserratItalic;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.edit-input > .save {
+  width: 50px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.save > .display-on-hover {
+  bottom: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  font-family: MontserratItalic;
+}
+.save:hover > .display-on-hover {
+  display: block;
+  position: absolute;
+}
+
+ul > li > .edited-box {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: MontserratLight;
+}
+.edited-box > span {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.edited-box > .button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  gap: 20px;
+}
+
+.button-box > .edit {
+  border: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 17px;
+}
+
+.edit > .display-on-hover {
+  bottom: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  font-family: MontserratItalic;
+}
+.edit:hover > .display-on-hover {
+  display: block;
+  position: absolute;
+}
+
+.button-box > .delete {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 17px;
+}
+
+.delete > .display-on-hover {
+  bottom: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  font-family: MontserratItalic;
+}
+.delete:hover > .display-on-hover {
+  display: block;
+  position: absolute;
+}

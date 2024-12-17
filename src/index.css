@@ -125,11 +125,11 @@ form > .add {
 }
 
 .add > .display-on-hover {
-  bottom: 30px;
+  bottom: 20px;
   display: none;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
   color: white;
   font-family: MontserratItalic;
 }
@@ -157,7 +157,7 @@ form > .add {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
   }
 }
@@ -186,6 +186,21 @@ ul > li > .edit-input {
   align-items: center;
 }
 
+@media screen and (max-width:896px) {
+  .app-container > ul > li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    /* border-bottom: 1px solid black; */
+  }
+  
+  .line-through {
+    text-decoration: line-through;
+    color: gray;
+  }
+}
+
 .edit-input > input {
   width: 340px;
   height: 35px;
@@ -198,6 +213,13 @@ ul > li > .edit-input {
   border-radius: 5px;
 }
 
+@media screen and (max-width:896px) {
+  .edit-input > input {
+    width: 300px;
+    height: 35px;
+  }
+}
+
 .edit-input > .save {
   left: 20px;
   background-color: transparent;
@@ -208,6 +230,12 @@ ul > li > .edit-input {
   align-items: center;
   position: relative;
   color: #352d2d;
+}
+
+@media screen and (max-width:896px) {
+  .edit-input > .save {
+    left: 15px;
+  }
 }
 
 .save > .display-on-hover {
